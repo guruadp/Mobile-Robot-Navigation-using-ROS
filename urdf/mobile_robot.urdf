@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mobile_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.25946001565708E-05 -0.062403452272786 0.384573757231794"
+        rpy="0 0 0" />
+      <mass
+        value="68.3202619212701" />
+      <inertia
+        ixx="5.37063950715391"
+        ixy="0.000387792418879414"
+        ixz="-0.000150604314056554"
+        iyy="1.55373832744678"
+        iyz="0.0137971211958053"
+        izz="6.78523043610395" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rear_left_wheel_shaft">
+    <inertial>
+      <origin
+        xyz="1.94289029309402E-16 0 -0.1143"
+        rpy="0 0 0" />
+      <mass
+        value="0.468481466874382" />
+      <inertia
+        ixx="0.00130973051373093"
+        ixy="2.9315633839274E-20"
+        ixz="-3.91566390856718E-20"
+        iyy="0.00130973051373093"
+        iyz="-1.95783195428359E-20"
+        izz="0.000151122751584338" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/rear_left_wheel_shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/rear_left_wheel_shaft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_wheel_shaft_joint"
+    type="continuous">
+    <origin
+      xyz="0.3556 0.188811295644438 0.28093186544375"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_wheel_shaft" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_left_wheel">
+    <inertial>
+      <origin
+        xyz="2.50818507907535E-08 -1.74865122937184E-08 -0.0254189996399616"
+        rpy="0 0 0" />
+      <mass
+        value="0.898923461702657" />
+      <inertia
+        ixx="0.00298323347457261"
+        ixy="8.0030845632189E-10"
+        ixz="9.1214044348779E-10"
+        iyy="0.00298323028364196"
+        iyz="1.94630419891131E-09"
+        izz="0.00566998391942397" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/rear_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/rear_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_wheel_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_wheel_shaft" />
+    <child
+      link="rear_left_wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_right_wheel_shaft">
+    <inertial>
+      <origin
+        xyz="-1.94289029309402E-16 -5.55111512312578E-17 0.1143"
+        rpy="0 0 0" />
+      <mass
+        value="0.468481466874382" />
+      <inertia
+        ixx="0.00130973051373093"
+        ixy="2.6509049401244E-53"
+        ixz="-1.30522130285573E-20"
+        iyy="0.00130973051373093"
+        iyz="-2.04427928104694E-36"
+        izz="0.000151122751584338" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/rear_right_wheel_shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/rear_right_wheel_shaft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_wheel_shaft_joint"
+    type="continuous">
+    <origin
+      xyz="-0.3556 0.188811295644438 0.28093186544375"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_wheel_shaft" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_right_wheel">
+    <inertial>
+      <origin
+        xyz="-2.50818509017758E-08 1.74865123492296E-08 0.0253810003600383"
+        rpy="0 0 0" />
+      <mass
+        value="0.898923461702656" />
+      <inertia
+        ixx="0.00298323347457261"
+        ixy="8.00308453160405E-10"
+        ixz="-9.12140444112547E-10"
+        iyy="0.00298323028364196"
+        iyz="-1.94630419902515E-09"
+        izz="0.00566998391942397" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/rear_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/rear_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_wheel_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_wheel_shaft" />
+    <child
+      link="rear_right_wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_right_wheel_shaft">
+    <inertial>
+      <origin
+        xyz="-0.00360185657960171 0.0196805518035527 0.132396071457413"
+        rpy="0 0 0" />
+      <mass
+        value="0.662757641502811" />
+      <inertia
+        ixx="0.00251068311249175"
+        ixy="1.61508343182953E-05"
+        ixz="4.56546510107146E-05"
+        iyy="0.0018935373555913"
+        iyz="-0.00059369273981454"
+        izz="0.000833768944559177" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_right_wheel_shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_right_wheel_shaft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_shaft_joint"
+    type="revolute">
+    <origin
+      xyz="-0.35553 -0.31435 0.28093"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel_shaft" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="-0.000690264139604047 1.36018457053133E-08 0.0253716123786964"
+        rpy="0 0 0" />
+      <mass
+        value="0.898923461702655" />
+      <inertia
+        ixx="0.00298522024326352"
+        ixy="1.2859664732117E-09"
+        ixz="-7.30398262744775E-05"
+        iyy="0.00298323058601774"
+        iyz="-2.02519461236709E-09"
+        izz="0.00566799684835727" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_wheel_shaft" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="-0.00273683970937426 0 -0.999996254847189" />
+  </joint>
+  <link
+    name="front_left_wheel_shaft">
+    <inertial>
+      <origin
+        xyz="-0.00505136395318612 0.0196805519337054 -0.132348693989804"
+        rpy="0 0 0" />
+      <mass
+        value="0.66275764390845" />
+      <inertia
+        ixx="0.00250948227588092"
+        ixy="2.26520389431454E-05"
+        ixz="-6.40044498645542E-05"
+        iyy="0.00189353737149804"
+        iyz="0.000593480256859154"
+        izz="0.000834969763617833" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_left_wheel_shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_left_wheel_shaft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_shaft_joint"
+    type="revolute">
+    <origin
+      xyz="0.35547 -0.31241 0.28093"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel_shaft" />
+    <axis
+      xyz="-0.0027368 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.000969490827605057 1.74865123492296E-08 -0.0254005045271187"
+        rpy="0 0 0" />
+      <mass
+        value="0.898923461702659" />
+      <inertia
+        ixx="0.00298714159238358"
+        ixy="7.2549526952249E-10"
+        ixz="0.000102395624335985"
+        iyy="0.00298323028364196"
+        iyz="-1.97541141777494E-09"
+        izz="0.00566607580161301" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_wheel_shaft" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="-0.00273683970937426 0 -0.999996254847189" />
+  </joint>
+</robot>
