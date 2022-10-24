@@ -307,7 +307,7 @@
     <child
       link="front_right_wheel_shaft" />
     <axis
-      xyz="0 0 0" />
+      xyz="1 0 0" />
     <limit
       lower="0"
       upper="0"
