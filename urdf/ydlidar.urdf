@@ -22,7 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ydlidar_ros/meshes/ydlidar.dae" />
+          filename="package://mobile_robot/meshes/ydlidar.dae" />
       </geometry>
       <material
         name="">
@@ -36,7 +36,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ydlidar_ros/meshes/ydlidar.dae" />
+          filename="package://mobile_robot/meshes/ydlidar.dae" />
       </geometry>
     </collision>
   </link>
@@ -56,29 +56,29 @@
         iyz="2.423E-07"
         izz="0.00011103" />
     </inertial>
-    <!--visual>
+    <visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ydlidar_ros/meshes/ydlidar.dae" />
+          filename="package://mobile_robot/meshes/ydlidar.dae" />
       </geometry>
       <material
         name="">
         <color
           rgba="0.64706 0.61961 0.58824 1" />
       </material>
-    </visual-->
-    <!--collision>
+    </visual>
+    <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://ydlidar_ros/meshes/ydlidar.dae" />
+          filename="package://mobile_robot/meshes/ydlidar.dae" />
       </geometry>
-    </collision-->
+    </collision>
   </link>
   <joint
     name="laser_joint"
