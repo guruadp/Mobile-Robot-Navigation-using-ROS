@@ -5,14 +5,14 @@
 <!-- Include your urdf files here -->
 	<!-- Include Robot's urdf filepath -->
 	<!-- Include Lidar's urdf filepath -->
-	<xacro:include filename="mobile_robot.urdf"/>
-	<xacro:include filename="ydlidar.urdf"/>
+	<xacro:include filename="$(find mobile_robot)/urdf/mobile_robot.urdf"/>
+	<xacro:include filename="$(find mobile_robot)/urdf/ydlidar.urdf"/>
 
 <!-- Add your gazebo sensors here -->
 <gazebo reference="base_laser">
 		<!-- <gravity>true</gravity> -->
 		<!-- Gazebo has fixed set of Sensors types. Check them out here <> -->
-		<sensor name="lidar" type="ray"> 
+		<sensor name="laser" type="ray"> 
 			<!-- Add in your sensor characteristics -->
 			<pose> 0 0 0 0 0 0 </pose>
 			<visualise>true</visualise>
@@ -40,7 +40,7 @@
             </ray>
             <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
             	<!-- Use topic name as /my_robot/scan -->
-				<topicName>/mobile_robot</topicName> 
+				<topicName>/mobile_robot/scan</topicName> 
 				<frameName>laser_frame</frameName>
 			</plugin>
 		</sensor>
@@ -83,7 +83,7 @@
 <joint name="lidar_joint" type="fixed">
   <parent link="base_link"/>
   <child link="base_laser"/>
-  <origin xyz="0 0 0.5" rpy="0 0 0"/>
+  <origin xyz="0 0 0.44" rpy="90 0 0"/>
 </joint>
 
 </robot>	

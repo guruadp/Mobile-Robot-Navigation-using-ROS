@@ -5,6 +5,7 @@
 <robot
   name="mobile_robot">
   <link name="dummy_link">
+  <pose>"0 0 0 0 0 0"</pose>
   </link>
   <joint name="dummy_joint" type="fixed">
     <parent link="dummy_link" />
@@ -325,11 +326,11 @@
   <transmission name="trans_front_right_wheel_shaft_joint">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="front_right_wheel_shaft_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_front_right_wheel_shaft_joint">
       <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </actuator>
   </transmission>
   <link
@@ -388,11 +389,11 @@
   <transmission name="trans_front_right_wheel_joint">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="front_right_wheel_joint">
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_front_right_wheel_joint">
       <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </actuator>
   </transmission>
   <link
@@ -456,11 +457,11 @@
   <transmission name="trans_front_left_wheel_shaft_joint">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="front_left_wheel_shaft_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_front_left_wheel_shaft_joint">
       <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </actuator>
   </transmission>
   <link
@@ -519,11 +520,11 @@
   <transmission name="trans_front_left_wheel_joint">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="front_left_wheel_joint">
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_front_left_wheel_joint">
       <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </actuator>
   </transmission>
 </robot>

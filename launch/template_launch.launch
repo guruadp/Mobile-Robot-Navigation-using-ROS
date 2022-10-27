@@ -30,7 +30,7 @@
 
 
     <!-- TF node that gives the static transformation between the world map and the base link of your robot. Change /base_link to the /root link name of your robot -->
-    <node pkg="tf" type="static_transform_publisher" name="map_to_base" args="1 0 0 0 0 0 1 /map /base_link 10" />
+    <node pkg="tf" type="static_transform_publisher" name="map_to_base" args="1 0 0 0 0 0 1 /map /dummy_link 10" />
 
 
     <!-- Controller spawner: Starts all the defined controllers with their configs. Just add your controller names defined in your config file into the args tag below   -->

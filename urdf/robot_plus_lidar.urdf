@@ -6,6 +6,7 @@
 <!-- Name your robot here -->
 <robot name="mobile_robot">
   <link name="dummy_link">
+    <pose>&quot;0 0 0 0 0 0&quot;</pose>
   </link>
   <joint name="dummy_joint" type="fixed">
     <parent link="dummy_link"/>
@@ -355,7 +356,7 @@
   <gazebo reference="base_laser">
     <!-- <gravity>true</gravity> -->
     <!-- Gazebo has fixed set of Sensors types. Check them out here <> -->
-    <sensor name="lidar" type="ray">
+    <sensor name="laser" type="ray">
       <!-- Add in your sensor characteristics -->
       <pose> 0 0 0 0 0 0 </pose>
       <visualise>true</visualise>
@@ -383,7 +384,7 @@
       </ray>
       <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_head_hokuyo_controller">
         <!-- Use topic name as /my_robot/scan -->
-        <topicName>/mobile_robot</topicName>
+        <topicName>/mobile_robot/scan</topicName>
         <frameName>laser_frame</frameName>
       </plugin>
     </sensor>
@@ -421,6 +422,6 @@
   <joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base_laser"/>
-    <origin rpy="0 0 0" xyz="0 0 0.5"/>
+    <origin rpy="0 0 0" xyz="0 0 0.35"/>
   </joint>
 </robot>
