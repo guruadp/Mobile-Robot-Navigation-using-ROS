@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 
 from std_msgs.msg import Float64
@@ -62,9 +62,9 @@ if __name__=="__main__":
     
     rospy.init_node('turtlebot_teleop')
 
-    pub_right = rospy.Publisher('', Float64, queue_size=10) # Add your topic here between ''. Eg '/my_robot/steering_controller/command'
-    pub_left = rospy.Publisher('', Float64, queue_size=10)
-    pub_move = rospy.Publisher('', Float64, queue_size=10) # Add your topic for move here '' Eg '/my_robot/longitudinal_controller/command'
+    pub_right = rospy.Publisher('/mobile_robot/right_steer_controller/command', Float64, queue_size=10) # Add your topic here between ''. Eg '/my_robot/steering_controller/command'
+    pub_left = rospy.Publisher('/mobile_robot/left_steer_controller/command', Float64, queue_size=10)
+    pub_move = rospy.Publisher('/mobile_robot/rear_wheel_controller/command', Float64, queue_size=10) # Add your topic for move here '' Eg '/my_robot/longitudinal_controller/command'
 
     x = 0
     th = 0
@@ -76,8 +76,8 @@ if __name__=="__main__":
     control_speed = 0
     control_turn = 0
     try:
-        print msg
-        print vels(speed,turn)
+        print(msg)
+        print (vels(speed,turn))
         while(1):
             key = getKey()
             if key in moveBindings.keys():
@@ -89,9 +89,9 @@ if __name__=="__main__":
                 turn = turn * speedBindings[key][1]
                 count = 0
 
-                print vels(speed,turn)
+                print (vels(speed,turn))
                 if (status == 14):
-                    print msg
+                    print (msg)
                 status = (status + 1) % 15
             elif key == ' ' or key == 'k' :
                 x = 0
@@ -129,7 +129,7 @@ if __name__=="__main__":
 
 
     except:
-        print e
+        print (e)
 
     finally:
         pub_right.publish(control_turn)
