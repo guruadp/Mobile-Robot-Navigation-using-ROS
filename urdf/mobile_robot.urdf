@@ -265,10 +265,10 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="10000" />
   </joint>
   <link
     name="front_right_wheel">
@@ -376,10 +376,10 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="10000" />
   </joint>
   <link
     name="front_left_wheel">
@@ -434,4 +434,36 @@
     <axis
       xyz="0.019056 0 0.99982" />
   </joint>
+
+  <transmission name="trans_front_left_shaft_joint">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="front_left_shaft_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_left_shaft_joint">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans_front_right_shaft_joint">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="front_right_shaft_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_right_shaft_joint">
+  <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans_rear_wheel_shaft_joint">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rear_wheel_shaft_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_rear_wheel_shaft_joint">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  
 </robot>
