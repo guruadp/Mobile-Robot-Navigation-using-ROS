@@ -23,22 +23,17 @@ mobile_robot:
 
   left_steer_controller: 
     type: effort_controllers/JointPositionController
-    joint: front_left_wheel_shaft"
-    pid : {p: 100.0 , i: 0.0 , d: 0.0} 
+    joint: front_right_shaft_joint
+    pid : {p: 100.0 , i: 0.0 , d: 0.01} 
 
   right_steer_controller: 
     type: effort_controllers/JointPositionController
-    joint: right_left_wheel_shaft"
+    joint: front_left_shaft_joint
     pid : {p: 100.0 , i: 0.0 , d: 0.0} 
 
-  left_wheel_controller: 
+  rear_wheel_controller: 
     type: velocity_controllers/JointVelocityController
-    joint: front_left_wheel"
-    pid : {p: 100.0 , i: 0.0 , d: 0.0} 
-
-  right_wheel_controller: 
-    type: velocity_controllers/JointVelocityController
-    joint: front_right_wheel"
+    joint: rear_wheel_shaft_joint
     pid : {p: 100.0 , i: 0.0 , d: 0.0} 
 
 
