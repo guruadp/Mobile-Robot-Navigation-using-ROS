@@ -17,17 +17,17 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="-2.25946001565708E-05 -0.062403452272786 0.384573757231794"
+        xyz="-0.00536959074715763 2.25014524108572E-18 0.217177065699251"
         rpy="0 0 0" />
       <mass
-        value="68.3202619212701" />
+        value="30.1147830562474" />
       <inertia
-        ixx="5.37063950715391"
-        ixy="0.000387792418879414"
-        ixz="-0.000150604314056554"
-        iyy="1.55373832744678"
-        iyz="0.0137971211958053"
-        izz="6.78523043610395" />
+        ixx="0.267982422238061"
+        ixy="3.18961658979921E-17"
+        ixz="-0.0121132618103098"
+        iyy="2.36479314961082"
+        iyz="-1.13699162010747E-17"
+        izz="2.57216262300582" />
     </inertial>
     <visual>
       <origin
@@ -40,7 +40,7 @@
       <material
         name="">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -54,20 +54,20 @@
     </collision>
   </link>
   <link
-    name="rear_left_wheel_shaft">
+    name="rear_wheel_shaft">
     <inertial>
       <origin
-        xyz="1.94289029309402E-16 0 -0.1143"
+        xyz="5.55111512312578E-17 -1.38777878078145E-17 0.254"
         rpy="0 0 0" />
       <mass
-        value="0.468481466874382" />
+        value="1.02790122650355" />
       <inertia
-        ixx="0.00130973051373093"
-        ixy="2.9315633839274E-20"
-        ixz="-3.91566390856718E-20"
-        iyy="0.00130973051373093"
-        iyz="-1.95783195428359E-20"
-        izz="0.000151122751584338" />
+        ixx="0.0222708703975125"
+        ixy="-5.60277001569187E-22"
+        ixz="-8.96443202510807E-22"
+        iyy="0.0222708703975125"
+        iyz="1.14744729921383E-19"
+        izz="0.000331023775623048" />
     </inertial>
     <visual>
       <origin
@@ -75,12 +75,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://mobile_robot/meshes/rear_left_wheel_shaft.STL" />
+          filename="package://mobile_robot/meshes/rear_wheel_shaft.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0 0 1 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -89,144 +89,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://mobile_robot/meshes/rear_left_wheel_shaft.STL" />
+          filename="package://mobile_robot/meshes/rear_wheel_shaft.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="rear_left_wheel_shaft_joint"
+    name="rear_wheel_shaft_joint"
     type="continuous">
     <origin
-      xyz="0.3556 0.188811295644438 0.28093186544375"
-      rpy="-1.5707963267949 0 -1.5707963267949" />
+      xyz="-0.254 -0.254 0.10414"
+      rpy="-1.5708 0 0" />
     <parent
       link="base_link" />
     <child
-      link="rear_left_wheel_shaft" />
+      link="rear_wheel_shaft" />
     <axis
-      xyz="0 0 -1" />
-  </joint>
-  <link
-    name="rear_left_wheel">
-    <inertial>
-      <origin
-        xyz="2.50818507907535E-08 -1.74865122937184E-08 -0.0254189996399616"
-        rpy="0 0 0" />
-      <mass
-        value="0.898923461702657" />
-      <inertia
-        ixx="0.00298323347457261"
-        ixy="8.0030845632189E-10"
-        ixz="9.1214044348779E-10"
-        iyy="0.00298323028364196"
-        iyz="1.94630419891131E-09"
-        izz="0.00566998391942397" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://mobile_robot/meshes/rear_left_wheel.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://mobile_robot/meshes/rear_left_wheel.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="rear_left_wheel_joint"
-    type="fixed">
-    <origin
-      xyz="0 0 0"
-      rpy="0 0 0" />
-    <parent
-      link="rear_left_wheel_shaft" />
-    <child
-      link="rear_left_wheel" />
-    <axis
-      xyz="0 0 0" />
-  </joint>
-  <link
-    name="rear_right_wheel_shaft">
-    <inertial>
-      <origin
-        xyz="-1.94289029309402E-16 -5.55111512312578E-17 0.1143"
-        rpy="0 0 0" />
-      <mass
-        value="0.468481466874382" />
-      <inertia
-        ixx="0.00130973051373093"
-        ixy="2.6509049401244E-53"
-        ixz="-1.30522130285573E-20"
-        iyy="0.00130973051373093"
-        iyz="-2.04427928104694E-36"
-        izz="0.000151122751584338" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://mobile_robot/meshes/rear_right_wheel_shaft.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://mobile_robot/meshes/rear_right_wheel_shaft.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="rear_right_wheel_shaft_joint"
-    type="continuous">
-    <origin
-      xyz="-0.3556 0.188811295644438 0.28093186544375"
-      rpy="1.5707963267949 0 1.5707963267949" />
-    <parent
-      link="base_link" />
-    <child
-      link="rear_right_wheel_shaft" />
-    <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
   </joint>
   <link
     name="rear_right_wheel">
     <inertial>
       <origin
-        xyz="-2.50818509017758E-08 1.74865123492296E-08 0.0253810003600383"
+        xyz="5.15331316508494E-09 -7.95165991385183E-09 0.0253999436872035"
         rpy="0 0 0" />
       <mass
-        value="0.898923461702656" />
+        value="0.627305726641923" />
       <inertia
-        ixx="0.00298323347457261"
-        ixy="8.00308453160405E-10"
-        ixz="-9.12140444112547E-10"
-        iyy="0.00298323028364196"
-        iyz="-1.94630419902515E-09"
-        izz="0.00566998391942397" />
+        ixx="0.00204147696517886"
+        ixy="4.79054851895501E-10"
+        ixz="-4.2698208997363E-11"
+        iyy="0.00204148095012536"
+        iyz="6.79392526445359E-11"
+        izz="0.00389311509621042" />
     </inertial>
     <visual>
       <origin
@@ -239,7 +133,7 @@
       <material
         name="">
         <color
-          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -259,27 +153,27 @@
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="rear_right_wheel_shaft" />
+      link="rear_wheel_shaft" />
     <child
       link="rear_right_wheel" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="front_right_wheel_shaft">
+    name="rear_left_wheel">
     <inertial>
       <origin
-        xyz="-0.00360185657960171 0.0196805518035527 0.132396071457413"
+        xyz="5.39349970241076E-09 7.79074413315151E-09 -0.0254000563127965"
         rpy="0 0 0" />
       <mass
-        value="0.662757641502811" />
+        value="0.627305726641922" />
       <inertia
-        ixx="0.00251068311249175"
-        ixy="1.61508343182953E-05"
-        ixz="4.56546510107146E-05"
-        iyy="0.0018935373555913"
-        iyz="-0.00059369273981454"
-        izz="0.000833768944559177" />
+        ixx="0.00204148071053849"
+        ixy="1.0615236852379E-09"
+        ixz="-4.65888979961479E-11"
+        iyy="0.00204147720476573"
+        iyz="-6.53326387010376E-11"
+        izz="0.00389311509621041" />
     </inertial>
     <visual>
       <origin
@@ -287,12 +181,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://mobile_robot/meshes/front_right_wheel_shaft.STL" />
+          filename="package://mobile_robot/meshes/rear_left_wheel.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -301,53 +195,96 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://mobile_robot/meshes/front_right_wheel_shaft.STL" />
+          filename="package://mobile_robot/meshes/rear_left_wheel.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="front_right_wheel_shaft_joint"
-    type="revolute">
+    name="rear_left_wheel_joint"
+    type="fixed">
     <origin
-      xyz="-0.35553 -0.31435 0.28093"
-      rpy="1.5708 0 1.5708" />
+      xyz="0 0 0.508"
+      rpy="0 0 0" />
+    <parent
+      link="rear_wheel_shaft" />
+    <child
+      link="rear_left_wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_right_shaft">
+    <inertial>
+      <origin
+        xyz="-0.0430899587810152 -0.00162292898887284 0.0239485318372451"
+        rpy="0 0 0" />
+      <mass
+        value="0.535359914923846" />
+      <inertia
+        ixx="0.000838252769830383"
+        ixy="-5.04285302841367E-05"
+        ixz="-0.000554743528122547"
+        iyy="0.00217524757125797"
+        iyz="-2.08943179736833E-05"
+        izz="0.00151373756430088" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_right_shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobile_robot/meshes/front_right_shaft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_shaft_joint"
+    type="continuous">
+    <origin
+      xyz="0.254 -0.1016 0.10414"
+      rpy="0 0 1.5708" />
     <parent
       link="base_link" />
     <child
-      link="front_right_wheel_shaft" />
+      link="front_right_shaft" />
     <axis
-      xyz="1 0 0" />
+      xyz="0 0 1" />
     <limit
       lower="0"
       upper="0"
       effort="0"
       velocity="0" />
   </joint>
-  <transmission name="trans_front_right_wheel_shaft_joint">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="front_right_wheel_shaft_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="motor_front_right_wheel_shaft_joint">
-      <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </actuator>
-  </transmission>
   <link
     name="front_right_wheel">
     <inertial>
       <origin
-        xyz="-0.000690264139604047 1.36018457053133E-08 0.0253716123786964"
+        xyz="-0.000955983299853636 9.266000994268E-09 0.0253819470341326"
         rpy="0 0 0" />
       <mass
-        value="0.898923461702655" />
+        value="0.627305726641922" />
       <inertia
-        ixx="0.00298522024326352"
-        ixy="1.2859664732117E-09"
-        ixz="-7.30398262744775E-05"
-        iyy="0.00298323058601774"
-        iyz="-2.02519461236709E-09"
-        izz="0.00566799684835727" />
+        ixx="0.00204410073423413"
+        ixy="1.68592920576061E-09"
+        ixz="-6.96409453575317E-05"
+        iyy="0.00204148012514777"
+        iyz="-1.52516835754976E-11"
+        izz="0.00389049215213273" />
     </inertial>
     <visual>
       <origin
@@ -360,7 +297,7 @@
       <material
         name="">
         <color
-          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -377,40 +314,30 @@
     name="front_right_wheel_joint"
     type="continuous">
     <origin
-      xyz="0 0 0"
-      rpy="0 0 0" />
+      xyz="-0.15229 -0.0057359 0"
+      rpy="-1.5708 0 -1.5708" />
     <parent
-      link="front_right_wheel_shaft" />
+      link="front_right_shaft" />
     <child
       link="front_right_wheel" />
     <axis
-      xyz="-0.00273683970937426 0 -0.999996254847189" />
+      xyz="0.019056 0 0.99982" />
   </joint>
-  <transmission name="trans_front_right_wheel_joint">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="front_right_wheel_joint">
-      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="motor_front_right_wheel_joint">
-      <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-    </actuator>
-  </transmission>
   <link
-    name="front_left_wheel_shaft">
+    name="front_left_shaft">
     <inertial>
       <origin
-        xyz="-0.00505136395318612 0.0196805519337054 -0.132348693989804"
+        xyz="0.04289975377601 -0.00435772630933368 0.0239485642209087"
         rpy="0 0 0" />
       <mass
-        value="0.66275764390845" />
+        value="0.535359728660285" />
       <inertia
-        ixx="0.00250948227588092"
-        ixy="2.26520389431454E-05"
-        ixz="-6.40044498645542E-05"
-        iyy="0.00189353737149804"
-        iyz="0.000593480256859154"
-        izz="0.000834969763617833" />
+        ixx="0.000850046101262467"
+        ixy="0.000134804599224858"
+        ixz="0.0005522943546741"
+        iyy="0.00216345318304651"
+        iyz="-5.6101367132104E-05"
+        izz="0.0015137371289239" />
     </inertial>
     <visual>
       <origin
@@ -418,12 +345,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://mobile_robot/meshes/front_left_wheel_shaft.STL" />
+          filename="package://mobile_robot/meshes/front_left_shaft.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -432,53 +359,43 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://mobile_robot/meshes/front_left_wheel_shaft.STL" />
+          filename="package://mobile_robot/meshes/front_left_shaft.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="front_left_wheel_shaft_joint"
-    type="revolute">
+    name="front_left_shaft_joint"
+    type="continuous">
     <origin
-      xyz="0.35547 -0.31241 0.28093"
-      rpy="1.5708 0 1.5708" />
+      xyz="0.254 0.1016 0.10414"
+      rpy="0 0 1.5708" />
     <parent
       link="base_link" />
     <child
-      link="front_left_wheel_shaft" />
+      link="front_left_shaft" />
     <axis
-      xyz="-0.0027368 0 -1" />
+      xyz="0 0 1" />
     <limit
       lower="0"
       upper="0"
       effort="0"
       velocity="0" />
   </joint>
-  <transmission name="trans_front_left_wheel_shaft_joint">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="front_left_wheel_shaft_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="motor_front_left_wheel_shaft_joint">
-      <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </actuator>
-  </transmission>
   <link
     name="front_left_wheel">
     <inertial>
       <origin
-        xyz="-0.000969490827605057 1.74865123492296E-08 -0.0254005045271187"
+        xyz="-0.00256689680593014 -9.45913411487531E-09 -0.0252700198156025"
         rpy="0 0 0" />
       <mass
-        value="0.898923461702659" />
+        value="0.627305726641922" />
       <inertia
-        ixx="0.00298714159238358"
-        ixy="7.2549526952249E-10"
-        ixz="0.000102395624335985"
-        iyy="0.00298323028364196"
-        iyz="-1.97541141777494E-09"
-        izz="0.00566607580161301" />
+        ixx="0.0020603888651654"
+        ixy="1.95432978665317E-09"
+        ixz="0.000186166060736423"
+        iyy="0.00204147956802362"
+        iyz="-1.17944122889787E-10"
+        izz="0.00387420457832561" />
     </inertial>
     <visual>
       <origin
@@ -491,7 +408,7 @@
       <material
         name="">
         <color
-          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -508,23 +425,13 @@
     name="front_left_wheel_joint"
     type="continuous">
     <origin
-      xyz="0 0 0"
-      rpy="0 0 0" />
+      xyz="0.15162 -0.015401 0"
+      rpy="-1.5708 0 -1.5708" />
     <parent
-      link="front_left_wheel_shaft" />
+      link="front_left_shaft" />
     <child
       link="front_left_wheel" />
     <axis
-      xyz="-0.00273683970937426 0 -0.999996254847189" />
+      xyz="0.019056 0 0.99982" />
   </joint>
-  <transmission name="trans_front_left_wheel_joint">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="front_left_wheel_joint">
-      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="motor_front_left_wheel_joint">
-      <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-    </actuator>
-  </transmission>
 </robot>
